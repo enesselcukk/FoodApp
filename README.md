@@ -19,7 +19,7 @@ Libraries Used
 
 Architecture
 --------------
-The app uses [MVVM architecture][37] to have a unidirectional flow of data, separation of concern, testability, and a lot more.
+The app uses [MVVM architecture][15] to have a unidirectional flow of data, separation of concern, testability, and a lot more.
 
 ![Architecture](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
   
@@ -40,5 +40,6 @@ FoodApp Video
 [12]: https://github.com/airbnb/lottie-android
 [13]: https://github.com/bumptech/glide
 [14]: https://github.com/google/ExoPlayer
+[15]:https://developer.android.com/topic/architecture
 
 
