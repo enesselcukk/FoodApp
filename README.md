@@ -25,6 +25,7 @@ The app uses [MVVM architecture][15] to have a unidirectional flow of data, sepa
   
 FoodApp Video
 --------------
+https://github.com/enesselcuk25/FoodApp/issues/1#issue-1265232495
 
 [1]: https://www.balldontlie.io/#introduction
 [2]: https://developer.android.com/topic/architecture/intro
