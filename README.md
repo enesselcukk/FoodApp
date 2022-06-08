@@ -2,13 +2,13 @@
 
 Libraries Used
 --------------
-  * [Architecture][2] - A collection of libraries that help you design robust, testable, and maintainable apps.
-  * [Lifecycles][3] - Create a UI that automatically responds to lifecycle events.
-  * [Navigation][4] - Handle everything needed for in-app navigation.
+  * [Architecture][2] A collection of libraries that help you design robust, testable, and maintainable apps.
+  * [Lifecycles][3] Create a UI that automatically responds to lifecycle events.
+  * [Navigation][4] Handle everything needed for in-app navigation.
   * [LiveData][5] Build data objects that notify views when the underlying database changes.
-  * [ViewModel][6] - Easily schedule asynchronous tasks for optimal execution.
-  * [Coroutines][7] - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
-  * [Room][8] - Access your app's SQLite database with in-app objects and compile-time checks.
+  * [ViewModel][6] Easily schedule asynchronous tasks for optimal execution.
+  * [Coroutines][7] A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
+  * [Room][8] Access your app's SQLite database with in-app objects and compile-time checks.
   * [Retrofit][9] for turns your HTTP API into a Java interface
   * [Gson][10] for convert Java Objects into their JSON representation
   * [Hilt][11] for dependency injection
@@ -54,5 +54,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [13]: https://github.com/bumptech/glide
 [14]: https://github.com/google/ExoPlayer
 [15]:https://developer.android.com/topic/architecture
-
-
