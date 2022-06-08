@@ -62,7 +62,7 @@ class DetailCountryBottomSheetFragment : BottomSheetDialogFragment() {
                             meail.strSource)
                     findNavController().navigate(action)
                 } else {
-                    Toast.makeText(requireContext(), "OOPS", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "not url", Toast.LENGTH_SHORT).show()
                 }
             }
         })

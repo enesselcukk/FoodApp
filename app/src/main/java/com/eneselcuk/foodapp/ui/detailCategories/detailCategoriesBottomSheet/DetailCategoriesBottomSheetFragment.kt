@@ -57,8 +57,6 @@ class DetailCategoriesBottomSheetFragment : BottomSheetDialogFragment() {
 
     fun categoriesClick() {
         viewModelDetailBottom.getFood.observe(viewLifecycleOwner, {
-
-
             it?.meals?.forEach { meal ->
                 if (meal.strSource?.isNotEmpty() == true) {
                     val action =
@@ -66,7 +64,7 @@ class DetailCategoriesBottomSheetFragment : BottomSheetDialogFragment() {
                             meal.strSource)
                     findNavController().navigate(action)
                 } else {
-                    Toast.makeText(requireContext(), "OOPS", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "not url", Toast.LENGTH_SHORT).show()
                 }
             }
         })

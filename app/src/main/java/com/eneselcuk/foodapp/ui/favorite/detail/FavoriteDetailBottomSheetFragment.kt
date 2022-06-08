@@ -47,10 +47,15 @@ class FavoriteDetailBottomSheetFragment : BottomSheetDialogFragment() {
     fun foodClick() {
         val foodSource: String? = args.foodEntity.details
         foodSource?.let {
-            val action =
-                FavoriteDetailBottomSheetFragmentDirections
-                    .actionFavoriteDetailBottomSheetFragmentToDetailFragment(foodSource)
-            findNavController().navigate(action)
+            if (it.isNotEmpty()) {
+                val action =
+                    FavoriteDetailBottomSheetFragmentDirections
+                        .actionFavoriteDetailBottomSheetFragmentToDetailFragment(foodSource)
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "not url", Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 
