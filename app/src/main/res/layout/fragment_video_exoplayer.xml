@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:argType="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.videoExoplayer.VideoExoplayerFragment">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:show_subtitle_button="true"
+            argType:fastforward_increment="15000"
+            argType:resize_mode="fixed_width"
+            argType:rewind_increment="15000"
+            argType:show_buffering="when_playing"
+            argType:show_fastforward_button="true"
+            argType:show_next_button="false"
+            argType:show_previous_button="false"
+            argType:show_rewind_button="true"
+            argType:show_subtitle_button="true"
+            argType:use_artwork="true"
+            argType:use_controller="true"
+            argType:use_sensor_rotation="true" />
+
+    </FrameLayout>
+</layout>

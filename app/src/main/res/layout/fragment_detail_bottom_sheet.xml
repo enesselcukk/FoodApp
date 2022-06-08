@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detailClick"
+            type="com.eneselcuk.foodapp.ui.detail.detailBottomSheet.DetailBottomSheetFragment" />
+
+        <variable
+            name="foodText"
+            type="com.eneselcuk.foodapp.data.remote.model.foodId.Meal" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:context=".ui.detail.detailBottomSheet.DetailBottomSheetFragment">
+
+            <View
+                android:id="@+id/view_sheet"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="140dp"
+                android:background="@drawable/line_main"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_add_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baselina_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_detail_food"
+                app:layout_constraintTop_toTopOf="@id/image_detail_food"
+                android:contentDescription="@string/favoriteimage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_detail_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:maxWidth="250dp"
+                android:maxHeight="350dp"
+                android:minHeight="280dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_sheet"
+                app:shapeAppearanceOverlay="@style/roundedDetailImageView"
+                tools:src="@drawable/ic_beef" />
+
+            <TextView
+                android:id="@+id/text_bottom_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="15dp"
+                android:fontFamily="@font/bitter_bold"
+                android:textColor="@color/boltgun_metal"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_detail_food"
+                tools:text="The kitchen - Quinoa" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/bitter_bold"
+                android:maxWidth="300dp"
+                android:minWidth="270dp"
+                android:text="@{foodText.strTags}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/btn_instructions"
+                app:layout_constraintEnd_toStartOf="@id/image_video"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_bottom_name"
+                tools:text="dsfsdfsdfsdfsdf" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="@{() -> detailClick.videOnCLick()}"
+                android:src="@drawable/ic_video_call"
+                app:layout_constraintBottom_toTopOf="@id/btn_instructions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_bottom_name" />
+
+
+            <Button
+                android:id="@+id/btn_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/layout_marginVertical"
+                android:backgroundTint="@color/ragweed"
+                android:fontFamily="@font/bitter_bold"
+                android:gravity="center"
+                android:maxWidth="@dimen/maxWidth"
+                android:maxHeight="@dimen/maxHeight"
+                android:minWidth="@dimen/minWidth"
+                android:minHeight="@dimen/minHeight"
+                android:onClick="@{() ->detailClick.detailOnCLick()}"
+                android:text="@string/detail_instructions"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize"
+                app:cornerRadius="@dimen/cornerRadius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_bottom_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

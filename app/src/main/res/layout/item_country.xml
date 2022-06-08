@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="country"
+            type="com.eneselcuk.foodapp.data.remote.model.countryList.Meal" />
+
+        <variable
+            name="click"
+            type="com.eneselcuk.foodapp.ui.home.adapter.country.CountryAdapter.Click" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/line_country"
+        android:onClick="@{() -> click.onClick(country)}">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_extra_bold"
+            android:text="@{country.strArea}"
+            android:textSize="18sp"
+            tools:text="Turkish" />
+
+    </FrameLayout>
+</layout>

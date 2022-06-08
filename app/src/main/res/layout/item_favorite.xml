@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="foodFavorite"
+            type="com.eneselcuk.foodapp.data.local.FoodEntity" />
+
+        <variable
+            name="onClick"
+            type="com.eneselcuk.foodapp.ui.favorite.adapter.favorite.FavoriteAdapter.FoodOnClick" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/line_favoite_item"
+        android:onClick="@{() -> onClick.foodClick(foodFavorite)}"
+        android:padding="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:src="@drawable/ic_beef"
+            app:foodCategoriesImage="@{foodFavorite.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <TextView
+            android:id="@+id/text_food_favorite_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/bitter_bold"
+            android:maxWidth="250dp"
+            android:text="@{foodFavorite.food_name}"
+            android:textAlignment="center"
+            android:textColor="@color/boltgun_metal"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/image_favorite"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="The kitchen - Quinoa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/bitter_bold"
+            android:gravity="center"
+            android:maxWidth="250dp"
+            android:text="@{foodFavorite.tags}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_favorite"
+            app:layout_constraintTop_toBottomOf="@id/text_food_favorite_name"
+            tools:text="Plain chocolate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

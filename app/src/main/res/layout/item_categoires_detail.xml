@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="categoriesName"
+            type="com.eneselcuk.foodapp.data.remote.model.categorieName.Meal" />
+
+        <variable
+            name="click"
+            type="com.eneselcuk.foodapp.ui.detailCategories.adapter.CategoriesDetailAdapter.DetailCategoriesClick" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/line_item_categories"
+        android:onClick="@{() -> click.onClick(categoriesName)}"
+        android:orientation="vertical"
+        android:paddingHorizontal="5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:contentDescription="@string/image_food_image"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            app:foodCategoriesImage="@{categoriesName.strMealThumb}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            tools:src="@drawable/ic_beef" />
+
+        <TextView
+            android:id="@+id/text_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:maxWidth="100dp"
+            android:minWidth="130dp"
+            android:paddingHorizontal="10dp"
+            android:text="@{categoriesName.strMeal}"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="Beef" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,36 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="layout_marginStart">25dp</dimen>
+    <dimen name="layout_marginVertical">10dp</dimen>
+    <dimen name="marginHorizontal">10dp</dimen>
+    <dimen name="paddingHorizontal">10dp</dimen>
+    <dimen name="maxWidth">250dp</dimen>
+    <dimen name="maxHeight">60dp</dimen>
+    <dimen name="minWidth">200dp</dimen>
+    <dimen name="minHeight">55dp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="textSize_item_top">24sp</dimen>
+    <dimen name="cornerRadius">10dp</dimen>
+
+    <dimen name="layout_marginVertical_video">15dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="maxWidth_c">100dp</dimen>
+    <dimen name="maxHeight_c">100dp</dimen>
+    <dimen name="minWidth_c">100dp</dimen>
+    <dimen name="minHeight_c">100dp</dimen>
+
+    <dimen name="layout_marginVertical_s">5dp</dimen>
+    <dimen name="padding">10dp</dimen>
+
+    <dimen name="marginHorizontal_r">20dp</dimen>
+
+    <dimen name="minWidth_r">250dp</dimen>
+    <dimen name="minHeight_r">150dp</dimen>
+    <dimen name="minHeight_sp">200dp</dimen>
+
+</resources>

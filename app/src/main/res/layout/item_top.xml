@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="searchOnClickListener"
+            type="com.eneselcuk.foodapp.ui.home.HomeFragment" />
+
+        <variable
+            name="foodCount"
+            type="com.eneselcuk.foodapp.data.local.entity.CountModel" />
+
+        <variable
+            name="favoriteFragment"
+            type="com.eneselcuk.foodapp.ui.favorite.FavoriteFragment" />
+
+        <variable
+            name="imageSearch"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_toolbar"
+        android:fitsSystemWindows="true"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginHorizontal"
+            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:fontFamily="@font/inter_extra_bold"
+            android:text="@string/foodenes"
+            android:textSize="@dimen/textSize_item_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/searchView_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginHorizontal"
+            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:background="@drawable/line_searchview"
+            android:onClick="@{() -> favoriteFragment.searchOnClick()}"
+            android:src="@drawable/ic_baseline_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:searchVisibility="@{imageSearch}"
+            android:contentDescription="@string/favoriteimagesearch" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

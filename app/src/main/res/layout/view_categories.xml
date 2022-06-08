@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModelCategories"
+            type="com.eneselcuk.foodapp.data.remote.model.categories.Category" />
+
+        <variable
+            name="click"
+            type="com.eneselcuk.foodapp.ui.home.adapter.categories.CategoriesAdapter.Click" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/marginHorizontal"
+        android:layout_marginVertical="@dimen/layout_marginVertical"
+        android:background="@drawable/line_item_categories"
+        android:onClick="@{() -> click.onClick(viewModelCategories)}"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/paddingHorizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:contentDescription="@string/image_food_image"
+            android:maxWidth="@dimen/maxWidth_c"
+            android:maxHeight="@dimen/maxHeight_c"
+            android:minWidth="@dimen/minWidth_c"
+            android:minHeight="@dimen/minHeight_c"
+            app:foodCategoriesImage="@{viewModelCategories.strCategoryThumb}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            tools:src="@drawable/ic_beef" />
+
+        <TextView
+            android:id="@+id/text_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/layout_marginVertical"
+            android:fontFamily="@font/bitter_bold"
+            android:text="@{viewModelCategories.strCategory}"
+            android:textColor="@color/black"
+            tools:text="Beef" />
+
+    </LinearLayout>
+</layout>
