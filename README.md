@@ -2,7 +2,6 @@
 
 Libraries Used
 --------------
-  * [Architecture][2] A collection of libraries that help you design robust, testable, and maintainable apps.
   * [Lifecycles][3] Create a UI that automatically responds to lifecycle events.
   * [Navigation][4] Handle everything needed for in-app navigation.
   * [LiveData][5] Build data objects that notify views when the underlying database changes.
